@@ -1,6 +1,64 @@
 @import "partials/variables";
+@import "partials/base";
 
-body {
-    min-height: 100vh;
-    background: getColors(lighterGray)
+nav, footer {
+    background-color: getColors(beige);
+    button.navbar-toggler {
+        border: none;
+    }
+}
+
+footer {
+    box-sizing: border-box;
+    max-width: 100vw;
+    margin: 0;
+    margin-top: 13vh;
+}
+
+
+
+div.main__content {
+    min-height: 70vh;
+    div.container {
+        max-width: 720px;
+        div.row {
+            margin: 20px 0px;
+            column-gap: 20px;
+            row-gap: 20px;
+            justify-content: center;
+            align-content: center;
+            @media screen and (min-width: 800px) {
+                flex-wrap: nowrap;
+            }
+            div.col {
+                &.bg-cerise{
+                    background-color: getColors(cerise);
+                }
+                
+                &.border-cerise{
+                    border: 3px solid getColors(cerise) !important;
+                }
+                &:not(.bg-cerise){
+                    background-color: getColors(beige);
+                }
+
+                border-radius: 1.3rem !important;
+                
+                @media screen and (max-width: 800px) {
+                    height: 340px;
+                    // margin: 20px 0px;
+                }
+                
+                @media screen and (min-width: 801px) {
+                    height: 25vh;
+                }
+                
+                &.border{
+                    border-width: 3px !important;
+                }
+            }
+        }
+        
+    }
+    
 }
